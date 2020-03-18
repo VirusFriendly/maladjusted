@@ -1,0 +1,10 @@
+need to create a section detection/creation system
+
+	detection...
+		looking for 3 known section stings for verification
+
+	creation...
+		use program segments
+		use start address
+		use elf header
+		detect if its static or uses libraries

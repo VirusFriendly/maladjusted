@@ -1,0 +1,9 @@
+to make...
+gcc -o elfedit *.c
+
+once a program is stipped of it's elf headers, it can still run although debugging programs such as gdb objdump and various traces wont work.
+
+to aid in obfuscation, statically link the program, and then strip it using strip, then strip using elfedit.
+
+for options type elfedit -?
+--chris

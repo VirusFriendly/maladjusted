@@ -1,0 +1,186 @@
+0x8048091:	mov    %esp,%ebx
+0x8048093:	mov    %esp,%eax
+0x8048095:	mov    %ecx,%edx
+0x8048097:	add    %edx,%edx
+0x8048099:	add    %edx,%edx
+0x804809b:	add    %edx,%eax
+0x804809d:	add    $0x4,%eax
+0x80480a0:	xor    %ebp,%ebp
+0x80480a2:	push   %ebp
+0x80480a3:	push   %ebp
+0x80480a4:	push   %ebp
+0x80480a5:	mov    %esp,%ebp
+0x80480a7:	push   %eax
+0x80480a8:	push   %ebx
+0x80480a9:	push   %ecx
+0x80480aa:	mov    $0x88,%eax
+0x80480af:	mov    $0x0,%ebx
+0x80480b4:	int    $0x80
+0x80480ba:	mov    %eax,0x806d228
+0x80480bf:	movzwl 0x8078b18,%eax
+0x80480c6:	push   %eax
+0x80480c7:	call   0x805756c
+
+0x805756c:		push   %ebp
+0x805756d:		mov    %esp,%ebp
+0x805756f:		sub    $0x4,%esp
+0x8057572:		mov    0x8(%ebp),%dx
+0x8057576:		test   %dx,%dx
+0x8057579:		jne    0x8057580
+0x805757b:		mov    $0x137f,%edx
+0x8057580:		fnstcw 0xfffffffe(%ebp)
+0x8057583:		mov    0xfffffffe(%ebp),%ax
+0x8057587:		and    $0xf0c0,%ax
+0x805758b:		mov    %ax,0xfffffffe(%ebp)
+0x805758f:		mov    %edx,%eax
+0x8057591:		and    $0xf3f,%ax
+0x8057595:		mov    0xfffffffe(%ebp),%dx
+0x8057599:		or     %dx,%ax
+0x805759c:		mov    %ax,0xfffffffe(%ebp)
+0x80575a0:		fldcw  0xfffffffe(%ebp)
+0x80575a3:		mov    %ebp,%esp
+0x80575a5:		pop    %ebp
+0x80575a6:		ret    
+
+0x80480cc:	add    $0x4,%esp
+0x80480cf:	call   0x8056d44
+
+0x8056d44:		push   %ebp
+0x8056d45:		mov    %esp,%ebp
+0x8056d47:		push   %edi
+0x8056d48:		push   %esi
+0x8056d49:		push   %ebx
+0x8056d4a:		mov    0xc(%ebp),%edi
+0x8056d4d:		mov    0x10(%ebp),%esi
+0x8056d50:		mov    $0x80675cc,%ebx
+0x8056d55:		cmp    $0x80675d0,%ebx
+0x8056d5b:		jae    0x8056e0a
+0x8056d61:		mov    $0x80675d0,%eax
+0x8056d66:		sub    $0x80675cc,%eax
+0x8056d6b:		and    $0xf,%eax
+0x8056d6e:		cmp    $0x80675d0,%ebx
+0x8056d74:		jge    0x8056dae
+0x8056d76:		test   %eax,%eax
+0x8056d78:		je     0x8056dc8
+0x8056d7a:		cmp    $0x4,%eax
+0x8056d7d:		jle    0x8056dae
+0x8056dae:		push   %esi
+0x8056daf:		push   %edi
+0x8056db0:		mov    0x8(%ebp),%edx
+0x8056db3:		push   %edx
+0x8056db4:		mov    (%ebx),%eax
+0x8056db6:		call   *%eax
+
+0x8056d3c:			push   %ebp
+0x8056d3d:			mov    %esp,%ebp
+0x8056d3f:			mov    %ebp,%esp
+0x8056d41:			pop    %ebp
+0x8056d42:			ret    
+	
+0x8056db8:		add    $0xc,%esp
+0x8056dbb:		add    $0x4,%ebx
+0x8056dbe:		cmp    $0x80675d0,%ebx
+0x8056dc4:		jae    0x8056e0a
+0x8056e0a:		lea    0xfffffff4(%ebp),%esp
+0x8056e0d:		pop    %ebx
+0x8056e0e:		pop    %esi
+0x8056e0f:		pop    %edi
+0x8056e10:		mov    %ebp,%esp
+0x8056e12:		pop    %ebp
+0x8056e13:		ret    
+
+0x80480d4:	push   $0x80675d0
+0x80480d9:	call   0x8055f08
+
+0x8055f08:		push   %ebp
+0x8055f09:		mov    %esp,%ebp
+0x8055f0b:		push   %ebx
+0x8055f0c:		mov    0x8(%ebp),%ebx
+0x8055f0f:		call   0x8055f34
+
+0x8055f34:			push   %ebp
+0x8055f35:			mov    %esp,%ebp
+0x8055f37:			mov    0x8078af4,%ecx
+0x8055f3d:			test   %ecx,%ecx
+0x8055f3f:			je     0x8055f6c
+0x8055f41:			lea    0x0(%esi),%esi
+0x8055f44:			xor    %edx,%edx
+0x8055f46:			cmp    %edx,0x4(%ecx)
+0x8055f49:			jbe    0x8055f60
+0x8055f60:			cmpl   $0x1f,0x4(%ecx)
+0x8055f64:			jbe    0x8055fa0
+0x8055fa0:			mov    0x4(%ecx),%eax
+0x8055fa3:			lea    (%eax,%eax,2),%eax
+0x8055fa6:			lea    0x8(%ecx,%eax,4),%eax
+0x8055faa:			incl   0x4(%ecx)
+0x8055fad:			mov    %ebp,%esp
+0x8055faf:			pop    %ebp
+0x8055fb0:			ret    
+
+0x8055f14:		test   %eax,%eax
+0x8055f16:		je     0x8055f28
+0x8055f18:		movl   $0x2,(%eax)
+0x8055f1e:		mov    %ebx,0x4(%eax)
+0x8055f21:		xor    %eax,%eax
+0x8055f23:		jmp    0x8055f2d
+0x8055f2d:		mov    0xfffffffc(%ebp),%ebx
+0x8055f30:		mov    %ebp,%esp
+0x8055f32:		pop    %ebp
+0x8055f33:		ret    
+
+0x80480de:	add    $0x4,%esp
+0x80480e1:	call   0x8048080
+
+0x8048080:		call   0x80675a8
+
+0x80675a8:			push   %ebx
+0x80675a9:			mov    $0x80792ac,%ebx
+0x80675ae:			cmpl   $0xffffffff,0x80792ac
+0x80675b5:			je     0x80675c4
+0x80675c4:			pop    %ebx
+0x80675c5:			ret    
+
+0x8048085:		ret    $0x0
+
+0x80480e6:	call   0x8048134
+
+0x8048134:		push   %ebp
+0x8048135:		mov    %esp,%ebp
+0x8048137:		sub    $0x44f0,%esp
+0x804813d:		push   %edi
+0x804813e:		push   %esi
+0x804813f:		push   %ebx
+0x8048140:		mov    0xc(%ebp),%ebx
+0x8048143:		movl   $0x1,0xffffbb40(%ebp)
+0x804814d:		lea    0xfffff800(%ebp),%edx
+0x8048153:		mov    %edx,0xffffbb30(%ebp)
+0x8048159:		lea    0xfffff814(%ebp),%ecx
+0x804815f:		mov    %ecx,0xffffbb2c(%ebp)
+0x8048165:		lea    0xfffff816(%ebp),%edx
+0x804816b:		mov    %edx,0xffffbb28(%ebp)
+0x8048171:		movl   $0x10,0xffffbb3c(%ebp)
+0x804817b:		call   0x805720c
+
+0x805720c:			push   %ebp
+0x805720d:			mov    %esp,%ebp
+0x805720f:			mov    $0x31,%eax
+0x8057214:			int    $0x80
+0x8057218:			test   %edx,%edx
+0x805721a:			jge    0x805722c
+0x805722c:			mov    %ebp,%esp
+0x805722e:			pop    %ebp
+0x805722f:			ret    
+
+0x8048180:		test   %eax,%eax
+0x8048182:		je     0x804818c
+0x804818c:		mov    (%ebx),%edx
+0x804818e:		xor    %al,%al
+0x8048190:		mov    %edx,%edi
+0x8048192:		cld    
+0x8048193:		mov    $0xffffffff,%ecx
+0x8048198:		repnz scas %es:(%edi),%al
+0x8048198:		repnz scas %es:(%edi),%al
+0x8048198:		repnz scas %es:(%edi),%al
+0x8048198:		repnz scas %es:(%edi),%al
+0x8048198:		repnz scas %es:(%edi),%al
+0x8048198:		repnz scas %es:(%edi),%al
